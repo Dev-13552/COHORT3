@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f18c40;
+  padding: 0.5rem;
+}
+
+h2 span {
+  color: #f18c40;
+}
+
+main {
+  width: 100%;
+  max-width: 1500px;
+  /* height: 100%; */
+  background-color: #fbf3ec;
+  border-radius: 2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 3rem;
+  height: 100px;
+  border-bottom: 1px solid #ded6ce;
+}
+
+.nav-left {
+  width: 50%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 4rem;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 4rem;
+  height: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: small;
+  font-weight: 600;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.icons {
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+}
+.hero-section {
+  padding: 3rem 3rem;
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+  width: 100%;
+  justify-content: baseline;
+}
+
+.left {
+  width: 40%;
+}
+
+.new {
+  color: #f18c40;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 3rem;
+  margin-top: 0.6rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+.section-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.desc {
+  width: 60%;
+  line-height: 1.6;
+  /* font-weight: lighter; */
+  margin: 1rem 0rem;
+  color: #a8a4a0;
+}
+
+.read-more {
+  margin-top: 2rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.accordion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.jacket {
+  height: 80%;
+  width: 95%;
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.12));
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  /* margin-top: 10%; */
+}
+.center-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-left: 10px;
+  margin-top: 10%;
+}
+.center-bottom img {
+  height: 30%;
+  width: 30%;
+}
+.center-btm-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.center-btm-div p {
+  font-size: x-small;
+}
+
+.right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+.option-title {
+  font-weight: 700;
+  font-size: x-large;
+}
+.sizes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.size {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+
+  background: #f0ebe7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.size.active {
+  background-color: #f18c40;
+  color: #f0ebe7;
+}
+.guide {
+  font-weight: bold;
+}
+.colors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 1rem;
+}
+.color-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 1rem;
+}
+.color-card.active img {
+  border: 2px solid #f37a00;
+}
+
+.color-name {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.wishlist {
+  /* margin-top:10px; */
+
+  width: 60%;
+  height: 40px;
+
+  border-radius: 999px;
+  border: 1px solid #ddd;
+
+  background: white;
+
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bag-btn {
+  margin-top: 10px;
+
+  width: 60%;
+  height: 48px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #f37a00;
+  color: white;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.bottom {
+  padding: 3rem;
+  width: 100%;
+}
+
+.bottom-cards {
+  background-color: #f7ede7;
+  border: 1px solid #e5ddd6;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.feature-card {
+  display: flex;
+  gap: 10px;
+  width: 250px;
+}
+
+.feature-card img {
+  width: 120px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+.feature-content p {
+  margin-top: 10px;
+  line-height: 1.4;
+  font-size: smaller;
+}
+
+.bottom-features {
+  background-color: #f7ede7;
+  border: 1px solid #e5ddd6;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.bottom-ft-card{
+    display: flex;
+    gap: 10px;
+    width: 200px;
+}
+.bottom-ft-card img{
+    width: 40px;
+    height: 40px;
+}
+.bottom-ft-card p{
+    font-size: x-small;
+}
