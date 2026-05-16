@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    grid-template-rows: 18% 18% 20% 16% 18%;
+    grid-template-areas: 
+    "left-top center-top1 center-top2 right-top"
+    "left-top center-top1 center-top2 right-bottom"
+    "left-bottom center-center1 center-top2 right-bottom"
+    "left-bottom center-center2 center-bottom2 center-bottom2"
+    "left-bottom center-bottom1 center-bottom2 center-bottom2"
+    ;
+    gap: 20px;
+}
+
+#left-top{
+    background-color: violet;
+    grid-area: left-top;
+}
+#left-bottom{
+    background-color: darkviolet;
+    grid-area: left-bottom;
+}
+
+#center-top1{
+    background-color: greenyellow;
+    grid-area: center-top1;
+}
+#center-center1{
+    background-color: yellowgreen;
+    grid-area: center-center1;
+}
+#center-center2{
+    background-color: rgb(83, 131, 11);
+    grid-area: center-center2;
+}
+#center-bottom1{
+    background-color: rgb(90, 94, 84);
+    grid-area: center-bottom1;
+}
+#center-top2{
+    background-color: rgb(189, 192, 185);
+    grid-area: center-top2;
+}
+#center-bottom2{
+    background-color: rgb(236, 238, 234);
+    grid-area: center-bottom2;
+}
+
+#right-top{
+    background-color: rgb(222, 23, 222);
+    grid-area: right-top;
+}
+#right-bottom{
+    background-color: rgb(130, 238, 173);
+    grid-area: right-bottom;
+    /* gap: 10px; */
+}
+
+.radius{
+    border-radius: 20px;
+}
