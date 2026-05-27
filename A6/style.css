@@ -1,0 +1,987 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Reckless;
+  src: url(/A6/fonts/RecklessCondensedS-TRIAL-Book.woff);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/A6/fonts/RobotoMono-Regular.ttf);
+}
+@font-face {
+  font-family: Midnight;
+  src: url(/A6/fonts/midnight-sans-rd-12-medium-trial.otf);
+}
+@font-face {
+  font-family: RobotoMono;
+  src: url(/A6/fonts/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2);
+}
+@font-face {
+  font-family: RobotoMono-med;
+  src: url(/A6/fonts/RobotoMono-Medium.ttf);
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fbf9eb;
+  /* padding: 1vw; */
+  position: relative;
+  overflow-x: hidden;
+}
+header {
+  width: 100%;
+  padding: 1vw;
+  position: fixed;
+  z-index: 100;
+}
+nav {
+  width: 100%;
+  background-color: #fffefb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Reckless";
+  padding: 3vw;
+  border-radius: 1vw;
+  border: 1px solid black;
+}
+
+nav i {
+  width: 10%;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+nav .nav-part-1 {
+  display: none;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 100;
+  width: 33%;
+}
+nav .nav-part-1 h3 {
+  font-weight: 100;
+}
+
+nav .nav-part-2 {
+  width: 20vw;
+  height: auto;
+  display: flex;
+}
+
+.nav-part-2 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+nav .nav-part-3 {
+  display: flex;
+  width: 10%;
+  gap: 2vw;
+  align-items: center;
+  font-size: 0.7rem;
+  font-family: "Roboto";
+}
+.nav-part-3 h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+  display: none;
+}
+
+#hero-section {
+  background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=1350.0);
+  width: 100%;
+  height: 95vh;
+  position: relative;
+  top: 0;
+  background-size: calc(200%);
+  background-position: center;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+#hero-content {
+  position: absolute;
+  bottom: 2rem;
+  color: #fffefb;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  align-items: center;
+}
+
+#hero-content h2 {
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  font-weight: 100;
+  text-align: center;
+}
+#hero-content p {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  word-spacing: 0.2rem;
+  text-align: center;
+}
+#hero-content button {
+  width: 12rem;
+  background-color: #2a2857;
+  border-radius: 1.5rem;
+  padding: 1vw;
+  border: 1px solid black;
+  color: #fffefb;
+  font-size: 1rem;
+}
+
+#section-2 {
+  padding: 3rem 0rem;
+  border-bottom: 2px solid black;
+}
+
+#section-2 h2 {
+  background-color: #fbf9eb;
+  width: 100%;
+}
+
+#section-2 .section-2-top-text {
+  font-family: "Reckless";
+}
+
+.section-2-top-text h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#section-2 #btm-h2 {
+  background-color: #daaeea;
+  width: 50%;
+  padding: 0.2rem 0rem;
+  font-weight: 900;
+  transform: rotateZ(-2deg);
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Midnight";
+  border: 1px solid black;
+  border-radius: 0.6rem;
+  position: relative;
+  left: 1rem;
+}
+
+#section-2 .card-container {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  overflow-x: auto;
+}
+
+.card {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.card img {
+  height: 60%;
+  width: 90%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 10%;
+}
+
+.card-top {
+  background-color: #c1ee91;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+.card-top:hover img {
+  scale: 1.1;
+}
+
+.card-top button {
+  width: 50%;
+  height: 10%;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.card-btm-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-btm-btn {
+  background-color: #fffefb;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  /* padding: 0.5rem 0rem; */
+}
+
+.card-btm {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-btm h3 {
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+.card-btm h4 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+.card-btm p {
+  color: #61615f8d;
+  font-weight: 500;
+}
+
+.section2-btm-btn {
+  width: 14rem;
+  background-color: #2a2857;
+  border-radius: 1.5rem;
+  padding: 3vw 2vw;
+  border: 1px solid black;
+  color: #fffefb;
+  font-size: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  left: 3rem;
+}
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.section3 {
+  width: 100%;
+  background-color: #fbf9eb;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section3 > button {
+  background-color: #ff7f31;
+  width: fit-content;
+  padding: 0 0.5rem;
+  font-weight: 900;
+  transform: rotateZ(-2deg);
+  text-align: center;
+  font-size: 2.6rem;
+  font-family: "Midnight";
+  border: 1px solid black;
+  border-radius: 0.6rem;
+}
+.section3 > h2 {
+  font-size: clamp(2rem, 3vw, 6rem);
+  font-family: "Reckless";
+  font-weight: 400;
+}
+.section3 > input {
+  background: #fbf9eb;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2.5rem 1rem;
+}
+.section3 > input::placeholder {
+  font-size: 2rem;
+  opacity: 0.7;
+}
+.section3 > p {
+  font-family: sans-serif;
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
+}
+
+.section3 .categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.categories .category {
+  background-color: #daeaff;
+  font-family: "Reckless";
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  font-size: clamp(1.8rem, 2vw, 3rem);
+  padding: 1rem;
+}
+
+.section4 {
+  width: 100%;
+  height: 200vh;
+}
+.section4 > img {
+  width: 100%;
+  height: 100%;
+}
+
+.section5 {
+  width: 100vw;
+
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section5 > button {
+  background-color: #73bc25;
+  width: fit-content;
+  padding: 0 0.5rem;
+  font-weight: 300;
+  transform: rotateZ(-2deg);
+  text-align: center;
+  font-size: 2.6rem;
+  font-family: "Midnight";
+  border: 1px solid black;
+  border-radius: 0.6rem;
+}
+.section5 > h2 {
+  display: none;
+}
+.section5 .container-card {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  overflow: auto;
+}
+.section5 .container-card::-webkit-scrollbar {
+  display: none;
+}
+.section5 .revCard {
+  background-color: #f5af8a;
+  width: 100%;
+  max-width: 20rem;
+  height: 70vh;
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+.revCard > .revText {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  font-family: "Reckless";
+}
+.revText > h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+}
+.innerCard {
+  background-color: #ea6d44;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  top: 25%;
+}
+.innerCard-left {
+  display: flex;
+  width: 60%;
+  align-items: center;
+}
+.innerCard-left img {
+  width: 30%;
+  height: 10vh;
+}
+.innerCard-left p {
+  color: #fffefb;
+  border-left: 1px solid black;
+  font-family: "Reckless";
+  font-size: 0.8rem;
+  width: 50%;
+  padding-left: 0.5rem;
+}
+.innerCard button {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1.6rem;
+}
+
+.section6 {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.section6 > img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+.section6-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-color: #2a2857;
+  color: #fffefb;
+  font-family: "Reckless";
+  padding: 2rem 1.5rem;
+}
+.section6-left h2 {
+  font-weight: 200;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.section6-left p {
+  max-width: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.section6-left button {
+  border: 1px solid black;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  width: 90%;
+  max-width: 20rem;
+}
+.section7 {
+  width: 100%;
+  /* height: 200vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: #9f6429; /*  */
+  gap: 10rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid black;
+}
+.section7-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  gap: 1rem;
+}
+.section7-top h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Midnight";
+  line-height: 0.9;
+}
+
+.section7-top button {
+  background-color: #ffcb96;
+  width: fit-content;
+  /* padding: 0 0.5rem; */
+  font-weight: 300;
+  transform: rotateZ(-2deg);
+  text-align: center;
+  font-size: 2.6rem;
+  font-family: "Midnight";
+  border: 1px solid black;
+  border-radius: 0.6rem;
+}
+.section7-top p {
+  font-family: sans-serif;
+}
+
+.latteCard {
+  height: 90vh;
+  width: 90%;
+  background-color: #ffcb96;
+  border: 1px solid black;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: black;
+  font-family: "Reckless";
+  padding-bottom: 2rem;
+  gap: 1rem;
+}
+.latteCard img {
+  position: absolute;
+  width: 120%;
+  max-width: 42rem;
+  /* height: 60%; */
+  top: -5rem;
+  left: -7rem;
+}
+
+.latteCard .nice {
+  background-color: #f09f54;
+  width: fit-content;
+  padding: 0 0.5rem;
+  font-weight: 300;
+  transform: rotateZ(-2deg);
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Midnight";
+  border: 1px solid black;
+  border-radius: 0.6rem;
+}
+
+.latteCard h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+.latteCard p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.2;
+  text-align: center;
+  width: 60%;
+}
+
+.latteCard .shop {
+  border: 1px solid black;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  width: 50%;
+}
+
+.latteCard-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.section8 {
+  padding: 4rem 1rem;
+}
+.section8 > .button {
+  background-color: #FFB500;
+  width: fit-content;
+  /* padding: 0 0.5rem; */
+  font-weight: 300;
+  transform: rotateZ(-2deg);
+  text-align: center;
+  font-size: 2.6rem;
+  font-family: "Midnight";
+  border: 1px solid black;
+  border-radius: 0.6rem;
+}
+/*   */
+.section8>h2{
+    font-family: 'Reckless';
+    font-weight: 300;
+    font-size: 2rem;
+    word-spacing: 1.4;
+    margin-top: 2rem;
+}
+
+.section8>.cards{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem 0;
+    overflow: auto;
+}
+.section8>.cards::-webkit-scrollbar{
+    display: none;
+}
+
+.card8{
+    width: 90%;
+    max-width: 18rem;
+    height: 62vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.card8 .part1{
+    background-color: #2A2857;
+    height: 75%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.part1 button{
+    position: absolute;
+    font-weight: 400;
+    font-family: 'Midnight';
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    left: 0.5rem;
+    top: 0.5rem;
+}
+.card8 img{
+    width: 100%;
+}
+
+.card8 .part2{
+    background-color: #C0DBFF;
+    height: 25%;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    font-family: sans-serif;
+    padding: 2rem 0.5rem;
+}
+
+.part2 p{
+    font-weight: 100;
+    word-spacing: 1.5;
+}
+
+.section8 .btm-btn{
+    background-color: #2a2857;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 20rem;
+    margin: 2rem 0rem auto;
+    position: relative;
+    left: 1rem;
+}
+
+
+.section9{
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/1440.webp?v=1771593223&width=1278);
+    position: relative;
+  }
+
+  .cardOrg{
+    background-color: #F26412;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Reckless';
+    position: absolute;
+    width: 100%;
+    top: 90vh;
+    padding: 4rem 1rem;
+    gap: 3rem;
+  }
+  .cardOrg h2{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 300;
+  }
+  .cardOrg p{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 75%;
+  }
+
+  .cardOrg button{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 20rem;
+    margin: 2rem 0rem auto;
+    position: relative;
+    left: 0.5rem;
+  }
+
+
+  footer{
+    background-color: #C0DBFF;
+    padding: 3rem 1rem;
+    top: 76vh;
+    position: relative;
+    z-index: 10;
+  }
+  footer h2{
+    font-family: 'Midnight';
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  footer > p{
+    font-family: 'Reckless';
+    font-size: 2rem;
+    opacity: 0.8;
+  }
+  .footer-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer input{
+    display: block;
+    width: 95%;
+    padding: 1.5rem 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    position: relative;
+    /* left: 1rem; */
+  }
+  footer input::placeholder{
+    opacity: 0.8;
+    font-size: 1rem;
+  }
+
+  footer .submit{
+    background-color: #2a2857;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 20rem;
+    margin: 1rem 0rem auto;
+  }
+
+
+
+/* Tablet */
+
+@media (min-width: 768px) {
+  .card {
+    width: 45%;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+  nav {
+    padding: 1vw;
+  }
+  nav .nav-part-1 {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+    width: 20%;
+  }
+
+  nav i {
+    display: none;
+  }
+
+  nav .nav-part-2 {
+    width: 5vw;
+  }
+
+  nav .nav-part-3 {
+    width: 30%;
+  }
+
+  .nav-part-3 h3 {
+    display: block;
+    font-size: 0.7rem;
+  }
+
+  #hero-section {
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=1280);
+    background-size: calc(144%);
+    background-position: center;
+  }
+  #hero-content {
+    left: 2rem;
+    width: 30%;
+    align-items: flex-start;
+  }
+
+  #hero-content h2 {
+    font-size: 4rem;
+    text-align: left;
+  }
+
+  #hero-content p {
+    text-align: left;
+  }
+
+  .card {
+    width: 25%;
+  }
+
+  #section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+  }
+  .section-2-top-text {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #section-2 #btm-h2 {
+    text-align: center;
+    width: 26%;
+    /* margin: 0 auto; */
+    font-size: 3rem;
+  }
+
+  .section2-btm-btn {
+    width: 14rem;
+    background-color: #2a2857;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    border: 1px solid black;
+    color: #fffefb;
+    font-size: 1rem;
+    margin-top: 2rem;
+    position: relative;
+    left: 3rem;
+  }
+  .section3 > input {
+    width: 30%;
+  }
+  .section3 {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .section5 {
+    padding-top: 10rem;
+  }
+  .section5 > button {
+    position: relative;
+    left: 10rem;
+  }
+  .section5 > h2 {
+    display: block;
+    position: relative;
+    left: 10rem;
+    font-family: "Reckless";
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+
+  .section6 {
+    flex-direction: row;
+    height: 80vh;
+  }
+  .section6 img {
+    height: 100%;
+  }
+  .section6-left {
+    padding: 3rem 3rem;
+    align-items: start;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .section6-left h2 {
+    font-size: 5rem;
+    text-align: left;
+  }
+  .section6-left p {
+    text-align: left;
+    width: 60%;
+  }
+  .section6-left button {
+    width: 30%;
+  }
+
+  .latteCard img {
+    position: relative;
+  }
+  .latteCard {
+    flex-direction: row;
+  }
+  .latteCard-right {
+    align-items: start;
+  }
+
+  .latteCard-right p {
+    text-align: left;
+  }
+  .latteCard-right h2 {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .latteCard-right .nice {
+    font-size: 3rem;
+  }
+  .latteCard-right .shop {
+    width: 10rem;
+  }
+
+  .section8 .button{
+    position: relative;
+    left: 10rem;
+    font-size: 4rem;
+  }
+  .section8{
+    padding-left: 2rem;
+  }
+  .section8 h2{
+    position: relative;
+    left: 10rem;
+    font-size: 4rem;
+    padding-bottom: 4rem;
+  }
+  .card8{
+    height: 54vh;
+  }
+  .section8 .btm-btn{
+    position: relative;
+    left: 40%;
+  }
+  .section9 .cardOrg{
+    top: 7%;
+    width: 30%;
+    height: 85%;
+    border: 1px solid black;
+    left: 6%;
+    border-radius: 1rem;
+  }
+}
