@@ -168,7 +168,7 @@ nav .nav-part-3 {
   transform: rotateZ(-2deg);
   text-align: center;
   font-size: 2rem;
-  font-family: "Midnight", sans-serif;
+  font-family: "Midnight", 'Reckless';
   border: 1px solid black;
   border-radius: 0.6rem;
   position: relative;
