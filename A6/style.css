@@ -336,11 +336,82 @@ nav .nav-part-3 {
 
 .section4 {
   width: 100%;
-  height: 200vh;
+  height: 230vh;
+  position: relative;
+  perspective: 1000px;
 }
 .section4 > img {
   width: 100%;
   height: 100%;
+  /* transform: translateZ(-5px); */
+}
+
+.section4-div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  gap: 7rem;
+  top: 0;
+  color: white;
+  padding-top: 10rem;
+  transform: translateZ(-20px);
+}
+.section4-div .origin{
+  background-color: #A2C9FC;
+  width: fit-content;
+  padding: 0 0.5rem;
+  font-weight: 900;
+  transform: rotateZ(-2deg);
+  text-align: center;
+  font-size: 2.6rem;
+  font-family: "Midnight";
+  border: 1px solid black;
+  border-radius: 0.6rem;
+}
+.section4-div>h2{
+  font-size: 6rem;
+  font-family: "Midnight";
+  text-align: center;
+}
+.section4-div>p{
+  font-size: 2rem;
+  font-family: "Reckless";
+  text-align: center;
+  width: 90%;
+}
+
+.sec4-icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+  font-family: "Midnight";
+}
+.sec4-icons div{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sec4-icons div img{
+  width: 5rem;
+  height: 5rem;
+  
+}
+.sec4-icons div p{
+  text-align: center;
+}
+
+.section4 .story{
+  border: 1px solid black;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  width: 90%;
+  max-width: 20rem;
 }
 
 .section5 {
@@ -1120,5 +1191,15 @@ footer .logo{
     position: relative;
     /* left: 6%; */
     text-align: center;
+  }
+  .section4{
+    height: 200vh;
+  }
+  .section4-div>p{
+    font-size: 4rem;
+  }
+  .section4-div>h2{
+    font-size: 10rem;
+    width: 60%;
   }
 }
