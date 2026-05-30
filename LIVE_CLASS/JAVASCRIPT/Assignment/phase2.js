@@ -118,3 +118,124 @@ for(let char of str){
 
 console.log(freq)
 
+
+function memoizedFactorial(){
+    const cache = {};
+
+    return (n) => {
+        if(cache[n]){
+            console.log("Returning from cache")
+            return cache[n];
+        }
+        let fact = 1;
+        for(let i = 1; i <= n; i++){
+            fact *= i;
+        }
+        if(!cache[n]){
+            cache[n] = fact;
+        }
+        return fact;
+    }
+}
+
+const factorial = memoizedFactorial();
+
+console.log(factorial(5));
+console.log(factorial(5));
+
+
+
+let array = [2, 6, 1, 19, "Luffy", true, ["Nami", "Zoro", "Sanji", "Ussop"]];
+
+for(let ele of array){
+    if(Array.isArray(ele)){
+        console.log(ele);
+    }
+}
+
+// array.unshift(20, 30, 60);
+console.log(array)
+array.shift()
+
+arr = [1, 2, 6, 7, 3, 9, 8, 4];
+// arr.sort((a, b) => {
+//     if((a % 2 == 0) != (b % 2 == 0)){
+//         return (a % 2 - b % 2);
+//     }
+//     return a - b;
+// })
+
+// console.log(arr)
+
+let newArray = ["Naruto", "Sasuke", "Sakura", "Hinata", 2, 3, 5, 6];
+
+newArray[0].toUpperCase()
+
+let products = [
+  { name: "Laptop", price: 50000 },
+  { name: "Phone", price: 20000 },
+];
+
+const newProducts = products.map((product) => {return {...product, discountPrice: product.price*0.9}});
+console.log(newProducts)
+
+
+let students = [
+  { name: "A", marks: 90 },
+  { name: "B", marks: 30 },
+  { name: "C", marks: 70 },
+];
+
+const index = students.findIndex((student) => student.marks < 33);
+console.log(index)
+
+function countProperties(obj){
+    return Object.keys(obj).length;
+}
+
+console.log("Total no. of keys are:", countProperties({a:1,b:2,c:3}))
+
+for(let key in products[0]){
+    console.log(`${key} : ${products[0][key]}`)
+}
+console.log("email" in products[0])
+
+console.log(Object.entries(products[0]))
+
+
+
+const arr3 = ["name", "Anubhav", "age", 24]
+
+let obj = {}
+
+arr3.forEach((ele, index) => {
+    if(index % 2 == 0){
+        obj[ele] = arr3[index + 1]
+    }
+})
+console.log(obj)
+
+
+function sum(a, b, c){
+    return a + b + c;
+}
+
+console.log(sum(2, 5, 4));
+
+const {name, price, discountPrice = 20} = products[0]
+
+console.log(discountPrice)
+
+Object.seal(products[0])
+
+Object.freeze()
+
+console.log(typeof [])
+console.log([] == false)
+
+console.log([1,2] + [3,4]);
+
+function x(a,b){
+   return a+b;
+}
+console.log(x(2));

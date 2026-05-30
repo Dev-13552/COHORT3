@@ -137,6 +137,11 @@ nav .nav-part-3 {
   border: 1px solid black;
   color: #fffefb;
   font-size: 1rem;
+  transition: all linear 0.1s;
+}
+#hero-content button:hover {
+  background-color: #fffefb;
+  color: black;
 }
 
 #section-2 {
@@ -273,6 +278,11 @@ nav .nav-part-3 {
   margin-top: 2rem;
   position: relative;
   left: 3rem;
+  transition: all linear 0.1s;
+}
+.section2-btm-btn:hover{
+  background-color: #fffefb;
+  color: black;
 }
 .card-container::-webkit-scrollbar {
   display: none;
@@ -550,7 +560,13 @@ nav .nav-part-3 {
   padding: 1rem 2rem;
   width: 90%;
   max-width: 20rem;
+  transition: all linear 0.1s;
 }
+.section6-left button:hover{
+  background-color: #2a2857;
+  color: #fffefb;
+}
+
 .section7 {
   width: 100%;
   /* height: 200vh; */
@@ -653,6 +669,11 @@ nav .nav-part-3 {
   text-align: center;
   padding: 1rem 2rem;
   width: 50%;
+  transition: all linear 0.1s;
+}
+.latteCard .shop:hover {
+  background-color: #2a2857;
+  color: white;
 }
 
 .latteCard-right {
@@ -706,6 +727,19 @@ nav .nav-part-3 {
   border-radius: 1rem;
   position: relative;
   flex-shrink: 0;
+  transition: all linear 0.1s;
+  cursor: pointer;
+}
+.card8:hover{
+
+  /* .card8 .part1 img{
+    transform: scale(1.2);
+  }
+
+  .card8 .part1 button{
+    transform: rotate(-2deg);
+  } */
+
 }
 
 .card8 .part1 {
@@ -756,6 +790,11 @@ nav .nav-part-3 {
   margin: 2rem 0rem auto;
   position: relative;
   left: 1rem;
+  transition: all linear 0.1s;
+}
+.section8 .btm-btn:hover{
+  background-color: #fff;
+  color: black;
 }
 
 .section9 {
@@ -804,7 +843,14 @@ nav .nav-part-3 {
   margin: 2rem 0rem auto;
   position: relative;
   left: 0.5rem;
+  transition: all linear 0.1s;
 }
+.cardOrg button:hover {
+  background-color: #2A2857;
+  color: white;
+}
+
+
 
 footer {
   background-color: #c0dbff;
@@ -828,6 +874,10 @@ footer > p {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+.footer-div .submit:hover{
+  background-color: #ffb500;
+  color: white;
 }
 
 .footer-div .icons{
@@ -899,6 +949,7 @@ footer .submit {
   width: 90%;
   max-width: 20rem;
   margin: 1rem 0rem auto;
+  transition: all linear 0.1s;
 }
 
 footer .bg-img{
