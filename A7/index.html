@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-theme="dark">
+    <main>
+      <button id="theme">
+        <!-- <i class="ri-moon-clear-line"></i> -->
+        <i class="ri-sun-fill"></i>
+      </button>
+      <p id="openBtn">Show Pipeline</p>
+      <header>
+        <div>
+          <div class="img">
+            <img src="./assets/icons/task-list.png" alt="" />
+          </div>
+          <h1>Todo List</h1>
+        </div>
+        <p>Organize your day with ease</p>
+      </header>
+
+      <div class="search">
+        <i class="ri-search-line"></i>
+        <input type="text" placeholder="Search tasks..." id="search"/>
+      </div>
+
+      <div class="taskBar">
+        <form class="taskInputGroup">
+          <input type="text" id="task" placeholder="Task title..." />
+          <button id="addBtn">+ Add</button>
+        </form>
+
+        <select name="category" id="category">
+          <option value="general">📁 General</option>
+          <option value="work">💼 Work</option>
+          <option value="personal">👤 Personal</option>
+          <option value="study">📚 Study</option>
+          <option value="health">❤️ Health</option>
+          <option value="home">🏠 Home</option>
+          <option value="shopping">🛒 Shopping</option>
+          <option value="finance">💰 Finance</option>
+          <option value="goals">🎯 Goals</option>
+        </select>
+      </div>
+
+      <div class="pending cards">
+        <!-- <h2>Pending</h2> -->
+      </div>
+      <div class="completed cards">
+        <!-- <h2>Completed</h2> -->
+      </div>
+    </main>
+    <section class="event-section">
+      <div class="event-btn">
+        <p id="bubble" class="active">Bubbling</p>
+        <p id="capture">Capturing</p>
+      </div>
+      <div class="grandparent">
+        GrandParent
+        <div class="parent">
+          Parent
+          <div class="child">Child</div>
+        </div>
+      </div>
+
+      <div class="logs">
+        <h2>Event Execution Log</h2>
+        <div class="log">Current Logs -</div>
+      </div>
+    </section>
+
+    <section class="pipeline">
+      <p id="closeBtn">X</p>
+      <div class="pipeline-content">
+        <h2>Browser Rendering Pipeline</h2>
+        <p class="stage">HTML</p>
+        <i class="ri-arrow-down-line"></i>
+        <p class="stage">Parsing</p>
+        <i class="ri-arrow-down-line"></i>
+        <p class="stage">Tokenization</p>
+        <i class="ri-arrow-down-line"></i>
+        <p class="stage">DOM Tree</p>
+        <i class="ri-arrow-down-line"></i>
+        <p class="stage">CSS</p>
+        <i class="ri-arrow-down-line"></i>
+        <p class="stage">CSSOM Tree</p>
+        <i class="ri-arrow-down-line"></i>
+        <p class="stage">DOM Tree + CSSOM Tree</p>
+        <i class="ri-arrow-down-line"></i>
+        <p class="stage">Render Tree</p>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

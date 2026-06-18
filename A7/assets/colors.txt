@@ -1,0 +1,10 @@
+Primary: #6366F1
+Background: #F8FAFC
+Card: #FFFFFF
+Border: #E2E8F0
+Text: #1E293B
+High: #EF4444
+Medium: #F59E0B
+Low: #22C55E
+Font: Inter
+Radius:16px
