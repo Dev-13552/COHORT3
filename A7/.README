@@ -1,0 +1,25 @@
+Browser Rendering PipeLine
+Browser Rendering Pipeline is the sequence of steps a browser follows to convert HTML, CSS, and JavaScript into the web page we see on the screen.
+
+Parsing -> Parsing is the process where the browser reads the HTML document and understands its structure and converts it into a format which browser can understand.
+
+Tokenization -> Before building the DOM Tree, the browser converts HTML into tokens.
+
+DOM Tree -> The browser reads the HTML from top to bottom. It converts every tag into a node. This is called the DOM (Document Object Model). It is a tree representation of HTML.
+
+CSSOM Tree -> Just like HTML becomes DOM, CSS becomes CSSOM. CSSOM stands for: CSS Object Model. It is a tree representation of CSS rules.
+
+Render Tree -> In this stage, the browser combines DOM with CSSOM to create Render Tree. The render tree contains: visible elements, computed styles.
+
+
+Event Propagation -> Event Propagation is the process by which an event travels through the DOM (Document Object Model) when it occurs on an element.
+
+It occurs in three phases: Capture phase, target phase, and bubble phase.
+
+Capturing Phase (Event Capturing) -> The event starts from the Document and moves downwards toward the target element.
+
+Target Phase -> The event reaches the actual element that was clicked.
+
+Bubbling Phase(Event Bubbling) -> After reaching the target, the event moves upwards.
+
+Event Delegation -> Event Delegation is a technique where one parent element handles events for its child elements using event bubbling. Instead of adding listeners to every child, we attach a single listener to the parent.
