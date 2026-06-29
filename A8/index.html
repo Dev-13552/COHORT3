@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fintrack Pro</title>
+
+    <script src="auth.js"></script>
+    <script>
+      checkUser(true);
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <aside>
+        <div class="aside-top">
+          <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="logo-text">
+              <h2>FinTrack Pro</h2>
+              <p>Enterprise Finance</p>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <div class="dashboard-tab">
+              <i class="fa-solid fa-border-all"></i> Dashboard
+            </div>
+            <div class="settings-tab">
+              <i class="fa-solid fa-gear"></i> Settings
+            </div>
+          </div>
+        </div>
+
+        <button class="add-btn">+ Add Transaction</button>
+      </aside>
+
+      <div class="main-content">
+        <nav>
+          <p class="user-name">| Luffy</p>
+          <button class="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i>Logout
+          </button>
+        </nav>
+
+        <div class="dashboard">
+          <header>
+            <h1>Financial Overview</h1>
+            <p>Real-time tracking application</p>
+          </header>
+
+          <div class="cards">
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <p>Current Balance</p>
+              <h3 id="curr-balance">$0.00</h3>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+              <p>Total Income</p>
+              <h3 id="income">$0.00</h3>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa-solid fa-arrow-trend-down"></i>
+              </div>
+              <p>Total Expense</p>
+              <h3 id="expense">$0.00</h3>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <i class="fa-solid fa-piggy-bank"></i>
+              </div>
+              <p>Total Transactions</p>
+              <h3 id="total-tx">0</h3>
+            </div>
+          </div>
+
+          <div class="analytics">
+            <div class="main-chart">
+              <h2>Cash Flow Analysis</h2>
+              <canvas id="expenseChart"></canvas>
+            </div>
+
+            <div class="sidebar">
+              <h2>Preferences</h2>
+              <div>
+                <h3>Dark Mode</h3>
+                <label class="themeSwitch">
+                  <input type="checkbox" id="darkModeToggle" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+
+              <button id="resetBtn">
+                <i class="fa-solid fa-trash"></i> Reset All Data
+              </button>
+            </div>
+          </div>
+
+          <div class="all-transactions">
+            <h2>All Transactions</h2>
+            <div>
+              <div class="search-div">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                  type="text"
+                  id="search-bar"
+                  placeholder="Search Transactions..."
+                />
+              </div>
+
+              <select id="filter">
+                <option value="all">All Types</option>
+                <option value="income">Income Only</option>
+                <option value="expense">Expense Only</option>
+              </select>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>DATE</th>
+                  <th>DESCRIPTION</th>
+                  <th>CATEGORY</th>
+                  <th>AMOUNT</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody class="table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="settings">
+          <header>
+            <h2>Settings</h2>
+            <p>Manage your account profile and app formatting</p>
+          </header>
+
+          <div class="profile-card">
+            <h2>Profile Details</h2>
+            <form class="profile-inputs">
+              <div class="card-input">
+                <div class="inputs">
+                  <label for="fullname">Full Name</label>
+                  <input type="text" id="fullname" class="input" />
+                </div>
+
+                <div class="inputs">
+                  <label for="currency">Primary Currency</label>
+                  <select id="currency" required class="input">
+                    <option value="$">USD ($)</option>
+                    <option value="€">EUR (€)</option>
+                    <option value="£">GBP (£)</option>
+                    <option value="₹">INR (₹)</option>
+                    <option value="¥">JPY (¥)</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" id="settingsBtn">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="overlay-form">
+      <form class="form-card">
+        <div class="form-header">
+          <h2 class="form-heading">Add Transaction</h2>
+          <p id="closeBtn">x</p>
+        </div>
+
+        <div class="inputs">
+          <label>Type</label>
+          <select id="type">
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </div>
+
+        <div class="inputs">
+          <label>Description</label>
+          <input type="text" id="desc" required />
+        </div>
+
+        <div>
+          <div class="inputs">
+            <label>Amount</label>
+            <input type="number" id="amount" required />
+          </div>
+
+          <div class="inputs">
+            <label>Date</label>
+            <input type="date" id="date" required />
+          </div>
+        </div>
+
+        <div class="inputs">
+          <label>Category</label>
+          <select id="tx-category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Food & Dining">Food & Dining</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Recharge & Bills">Recharge & Bills</option>
+            <option value="Petrol & Auto">Petrol & Auto</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Salary">Salary</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <button type="submit" id="saveBtn">Save Transaction</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
